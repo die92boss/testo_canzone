@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Analisi - Sally</title>
+		<link rel="icon" href="immagini/icon.jpg" type="image/jpeg" />
+		<link rel="stylesheet" href="style.css" />
+		<style>
+			/* Layout matched to testo.html */
+			.lyrics-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 40px;
+				align-items: start;
+			}
+
+			.sticky-box {
+				position: sticky;
+				top: 100px; /* Offset for fixed header */
+				background: var(--card-bg);
+				border-radius: 16px;
+				overflow: hidden;
+				box-shadow: var(--glass-shadow);
+				border: 1px solid var(--border-color);
+				padding: 30px;
+				backdrop-filter: blur(5px);
+			}
+
+			@media (max-width: 900px) {
+				.lyrics-container {
+					grid-template-columns: 1fr;
+				}
+				.sticky-box {
+					position: relative;
+					top: 0;
+					margin-bottom: 30px;
+				}
+			}
+
+			/* Legend Styles */
+			.legend-list {
+				list-style: none;
+				margin-top: 20px;
+			}
+
+			.legend-item {
+				display: flex;
+				align-items: center;
+				font-size: 1.1rem;
+				font-weight: 500;
+				color: var(--text-primary);
+				margin-bottom: 15px;
+				padding: 10px;
+				border-radius: 8px;
+				background: rgba(255, 255, 255, 0.03);
+				transition: background 0.3s;
+			}
+			.legend-item:hover {
+				background: rgba(255, 255, 255, 0.08);
+			}
+
+			.color-box {
+				width: 20px;
+				height: 20px;
+				margin-right: 15px;
+				border-radius: 4px;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			}
+
+			/* Highlight classes */
+			.rima {
+				color: #ffd700;
+				font-weight: bold;
+			}
+			.assonanza {
+				color: #00ffff;
+				font-weight: bold;
+			}
+			.allitterazione {
+				color: #7fff00;
+				font-weight: bold;
+			}
+			.metafora {
+				color: #ff5555;
+				font-weight: bold;
+				text-decoration: underline;
+				text-decoration-color: #ff5555;
+			}
+			.climax {
+				color: #ffa500;
+				font-weight: bold;
+			}
+			.similitudine {
+				color: #ff69b4;
+				font-weight: bold;
+				font-style: italic;
+			}
+
+			.lyrics-text {
+				font-size: 1.2rem;
+				line-height: 2.2; /* Slightly increased for better readability of analysis */
+				white-space: normal; /* Changed from pre-wrap to normal */
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<nav>
+					<a href="index.html" class="logo">
+						<img src="immagini/icon.jpg" alt="Logo" class="nav-logo" />
+						SALLY
+					</a>
+					<ul class="nav-links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="testo.html">Testo</a></li>
+						<li><a href="motivazione.html">Motivazione</a></li>
+						<li><a href="analisi.html" class="active">Analisi</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="section" style="padding-top: 120px">
+			<div class="container">
+				<h1 class="page-title">Analisi del Testo</h1>
+
+				<div class="lyrics-container">
+					<!-- Left Side: Legend (Sticky) -->
+					<div class="sticky-box">
+						<h3
+							style="
+								margin-bottom: 10px;
+								border-bottom: 2px solid var(--accent-color);
+								display: inline-block;
+							"
+						>
+							Legenda
+						</h3>
+						<p style="font-size: 0.9rem; margin-bottom: 20px">
+							Figure Retoriche individuate
+						</p>
+
+						<ul class="legend-list">
+							<li class="legend-item">
+								<div class="color-box" style="background: #ffd700"></div>
+								Rime
+							</li>
+							<li class="legend-item">
+								<div class="color-box" style="background: #00ffff"></div>
+								Assonanze
+							</li>
+							<li class="legend-item">
+								<div class="color-box" style="background: #7fff00"></div>
+								Allitterazioni
+							</li>
+							<li class="legend-item">
+								<div class="color-box" style="background: #ff5555"></div>
+								Metafore
+							</li>
+							<li class="legend-item">
+								<div class="color-box" style="background: #ffa500"></div>
+								Climax
+							</li>
+							<li class="legend-item">
+								<div class="color-box" style="background: #ff69b4"></div>
+								Similitudini
+							</li>
+						</ul>
+					</div>
+
+					<!-- Right Side: Analyzed Text -->
+					<div class="card lyrics-content">
+						<div class="lyrics-text">
+							<span class="allitterazione">S</span>ally cammina per la
+							<span class="allitterazione">s</span>trada
+							<span class="allitterazione">s</span>enza nemmeno<br />
+							Guardare per <span class="rima">terra</span><br />
+							Sally è una donna che non ha più voglia<br />
+							Di
+							<span class="metafora"
+								>fare la <span class="rima">guerra</span></span
+							><br />
+							<br />
+							Sally ha <span class="allitterazione">p</span>atito tro<span
+								class="allitterazione"
+								>pp</span
+							>o<br />
+							Sally ha già visto che <span class="assonanza">cosa</span><br />
+							Ti <span class="allitterazione">p</span>uò crollare
+							<span class="assonanza">addosso</span><br />
+							Sally è già stata <span class="allitterazione">p</span>unita<br />
+							<br />
+							Per ogni <span class="allitterazione">s</span>ua distrazione o
+							<span class="rima">debolezza</span><br />
+							Per ogni <span class="allitterazione">c</span>andida
+							<span class="rima">carezza</span><br />
+							Tanto per non <span class="allitterazione">s</span>entire l'<span
+								class="rima"
+								>amarezza</span
+							><br />
+							<br />
+							<span class="climax"
+								>Senti che fuori <span class="assonanza">piove</span><br />
+								Senti che bel <span class="assonanza">rumore</span></span
+							><br />
+							<br />
+							<span class="allitterazione">S</span>ally cammina per la strada,
+							<span class="allitterazione">s</span>icura<br />
+							<span class="allitterazione">S</span>enza pen<span
+								class="allitterazione"
+								>s</span
+							>are a <span class="rima">niente</span><br />
+							Ormai <span class="allitterazione">g</span>uarda la
+							<span class="rima">gente</span><br />
+							Con aria <span class="rima">indifferente</span><br />
+							<br />
+							Sono lontani quei <span class="rima">momenti</span><br />
+							Quando uno sguardo provocava <span class="rima">turbamenti</span
+							><br />
+							Quando la vita era più <span class="assonanza">facile</span><br />
+							E si potevano mangiare anche le
+							<span class="assonanza">fragole</span><br />
+							<br />
+							Perché
+							<span class="metafora"
+								>la vita è un brivido che vola
+								<span class="rima">via</span></span
+							><br />
+							È tutto un equilibrio sopra la <span class="rima">follia</span
+							><br />
+							Sopra la <span class="rima">follia</span><br />
+							<br />
+							Senti che fuori <span class="assonanza">piove</span><br />
+							Senti che bel <span class="assonanza">rumore</span><br />
+							<br />
+							Ma forse Sally è proprio questo il senso, il senso<br />
+							Del tuo <span class="assonanza">vagare</span><br />
+							Forse davvero ci si deve sentire<br />
+							Alla fine un po' <span class="assonanza">male</span><br />
+							<br />
+							Forse alla fine di questa triste storia<br />
+							Qualcuno troverà il <span class="rima">coraggio</span><br />
+							Per affrontare i sensi di colpa<br />
+							E cancellarli da questo <span class="rima">viaggio</span><br />
+							<br />
+							Per vivere davvero ogni <span class="rima">momento</span><br />
+							Con ogni suo <span class="rima">turbamento</span><br />
+							<span class="similitudine">E come se fosse l'ultimo</span><br />
+							<br />
+							Sally cammina per la strada, <span class="rima">leggera</span
+							><br />
+							Ormai è <span class="rima">sera</span><br />
+							Si accendono le luci dei <span class="rima">lampioni</span><br />
+							Tutta la gente corre a casa davanti alle
+							<span class="rima">televisioni</span><br />
+							<br />
+							Ed un pensiero le passa per la <span class="assonanza">testa</span
+							><br />
+							Forse la vita non è stata tutta
+							<span class="assonanza">persa</span><br />
+							Forse qualcosa s'è <span class="rima">salvato</span><br />
+							Forse davvero non è stato poi tutto
+							<span class="rima">sbagliato</span><br />
+							<br />
+							Forse era giusto <span class="rima">così</span><br />
+							Forse, ma forse, ma <span class="rima">sì</span><br />
+							<br />
+							Cosa vuoi che ti dica io?<br />
+							Senti che bel rumore
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="container">
+				<p>&copy; 2026 Diego Cerani & Nicolò Polverini</p>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>

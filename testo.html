@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Testo - Sally</title>
+		<link rel="icon" href="immagini/icon.jpg" type="image/jpeg" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+		<style>
+			.lyrics-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 40px;
+				align-items: start;
+			}
+
+			.video-box {
+				position: sticky;
+				top: 100px; /* Offset for fixed header */
+				background: rgba(0, 0, 0, 0.5);
+				border-radius: 16px;
+				overflow: hidden;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+				border: 1px solid var(--border-color);
+			}
+
+			.video-box iframe {
+				width: 100%;
+				aspect-ratio: 16/9;
+				display: block;
+			}
+
+			.lyrics-content {
+				font-size: 1.1rem;
+				line-height: 1.8;
+				color: var(--text-primary);
+			}
+
+			.lyrics-content h2 {
+				margin-bottom: 30px;
+			}
+
+			@media (max-width: 900px) {
+				.lyrics-container {
+					grid-template-columns: 1fr;
+				}
+				.video-box {
+					position: relative;
+					top: 0;
+					margin-bottom: 30px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<nav>
+					<a href="index.html" class="logo">
+						<img src="immagini/icon.jpg" alt="Logo" class="nav-logo" />
+						SALLY
+					</a>
+					<ul class="nav-links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="testo.html" class="active">Testo</a></li>
+						<li><a href="motivazione.html">Motivazione</a></li>
+						<li><a href="analisi.html">Analisi</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="section" style="padding-top: 120px">
+			<div class="container">
+				<h1 class="page-title">Testo della Canzone</h1>
+
+				<div class="lyrics-container">
+					<div class="video-box">
+						<video
+							id="player"
+							playsinline
+							controls
+							style="--plyr-color-main: #ff3333"
+						>
+							<source src="video\Vasco Rossi - Sally.webm" type="video/webm" />
+						</video>
+						<div style="padding: 15px">
+							<h3 style="font-size: 1.2rem; margin-bottom: 5px">
+								Vasco Rossi - Sally
+							</h3>
+							<p style="font-size: 0.9rem; margin-bottom: 0">Video ufficiale</p>
+						</div>
+					</div>
+
+					<div class="card lyrics-content">
+						<p>
+							Sally cammina per la strada senza nemmeno<br />
+							Guardare per terra<br />
+							Sally è una donna che non ha più voglia<br />
+							Di fare la guerra<br />
+							<br />
+							Sally ha patito troppo<br />
+							Sally ha già visto che cosa<br />
+							Ti può crollare addosso<br />
+							Sally è già stata punita<br />
+							<br />
+							Per ogni sua distrazione o debolezza<br />
+							Per ogni candida carezza<br />
+							Tanto per non sentire l'amarezza<br />
+							<br />
+							Senti che fuori piove<br />
+							Senti che bel rumore<br />
+							<br />
+							Sally cammina per la strada, sicura<br />
+							Senza pensare a niente<br />
+							Ormai guarda la gente<br />
+							Con aria indifferente<br />
+							<br />
+							Sono lontani quei momenti<br />
+							Quando uno sguardo provocava turbamenti<br />
+							Quando la vita era più facile<br />
+							E si potevano mangiare anche le fragole<br />
+							<br />
+							Perché la vita è un brivido che vola via<br />
+							È tutto un equilibrio sopra la follia<br />
+							Sopra la follia<br />
+							<br />
+							Senti che fuori piove<br />
+							Senti che bel rumore<br />
+							<br />
+							Ma forse Sally è proprio questo il senso, il senso<br />
+							Del tuo vagare<br />
+							Forse davvero ci si deve sentire<br />
+							Alla fine un po' male<br />
+							<br />
+							Forse alla fine di questa triste storia<br />
+							Qualcuno troverà il coraggio<br />
+							Per affrontare i sensi di colpa<br />
+							E cancellarli da questo viaggio<br />
+							<br />
+							Per vivere davvero ogni momento<br />
+							Con ogni suo turbamento<br />
+							E come se fosse l'ultimo<br />
+							<br />
+							Sally cammina per la strada, leggera<br />
+							Ormai è sera<br />
+							Si accendono le luci dei lampioni<br />
+							Tutta la gente corre a casa davanti alle televisioni<br />
+							<br />
+							Ed un pensiero le passa per la testa<br />
+							Forse la vita non è stata tutta persa<br />
+							Forse qualcosa s'è salvato<br />
+							Forse davvero non è stato poi tutto sbagliato<br />
+							<br />
+							Forse era giusto così<br />
+							Forse, ma forse, ma sì<br />
+							<br />
+							Cosa vuoi che ti dica io?<br />
+							Senti che bel rumore
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="container">
+				<p>&copy; 2026 Diego Cerani & Nicolò Polverini</p>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+		<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+		<script>
+			const player = new Plyr("#player", {
+				controls: [
+					"play-large",
+					"play",
+					"progress",
+					"current-time",
+					"mute",
+					"volume",
+					"fullscreen",
+				],
+				keyboard: { focused: true, global: true },
+			});
+		</script>
+	</body>
+</html>
